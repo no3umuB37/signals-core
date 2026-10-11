@@ -20,7 +20,7 @@ namespace SignalProcessing.Core
         }
 
         public float[] Filter(float[] data)
-    {
+        {
             if (data == null)
                 throw new ArgumentNullException(nameof(data));
             float[] result = new float[data.Length];

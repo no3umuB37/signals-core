@@ -32,7 +32,7 @@ namespace SignalProcessing.Core
                 if (outside && start < 0)
                     start = i;
                 if (!outside && start >= 0)
-    {
+                {
                     int end = i - 1;
                     if (end - start + 1 >= _minDuration)
                         OutOfRange?.Invoke(this, new OutOfRangeEventArgs(start, end));

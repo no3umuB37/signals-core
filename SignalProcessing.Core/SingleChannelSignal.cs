@@ -21,7 +21,7 @@ namespace SignalProcessing.Core
             {
                 float[] timeTick = new float[Value.Length];
                 for (int i = 0; i < Value.Length; i++)
-    {
+                {
                     timeTick[i] = i / Freq;
                 }
                 return timeTick;

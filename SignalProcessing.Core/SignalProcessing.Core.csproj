@@ -56,10 +56,6 @@
     <Compile Include="ThresholdCutter.cs" />
     <Compile Include="Tools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SingleChannelRangeAnalyzer.cs" />
-    <Compile Include="SingleChannelSignal.cs" />
-    <Compile Include="SingleChannelSignalReader.cs" />
-    <Compile Include="SingleChannelSignalWriter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
