@@ -6,6 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A27183E4-0734-4B0A-BCC7-6D3F6A61DA27}</ProjectGuid>
     <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SignalProcessing.Core</RootNamespace>
     <AssemblyName>SignalProcessing.Core</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
@@ -55,6 +56,10 @@
     <Compile Include="ThresholdCutter.cs" />
     <Compile Include="Tools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SingleChannelRangeAnalyzer.cs" />
+    <Compile Include="SingleChannelSignal.cs" />
+    <Compile Include="SingleChannelSignalReader.cs" />
+    <Compile Include="SingleChannelSignalWriter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,5 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace SignalProcessing.Core
 {
@@ -17,7 +20,7 @@ namespace SignalProcessing.Core
         }
 
         public float[] Filter(float[] data)
-        {
+    {
             if (data == null)
                 throw new ArgumentNullException(nameof(data));
             float[] result = new float[data.Length];
