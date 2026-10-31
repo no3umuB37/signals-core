@@ -43,6 +43,8 @@
     <Compile Include="CircularBufferTests.cs" />
     <Compile Include="OnlineFilterTests.cs" />
     <Compile Include="ResamplerTests.cs" />
+    <Compile Include="MedianFilterTests.cs" />
+    <Compile Include="ExponentialSmoothingFilterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
