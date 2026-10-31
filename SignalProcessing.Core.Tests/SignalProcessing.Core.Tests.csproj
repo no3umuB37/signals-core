@@ -40,6 +40,7 @@
     <Compile Include="OfflineFilterTests.cs" />
     <Compile Include="SignalFileTests.cs" />
     <Compile Include="SignalOperationsTests.cs" />
+    <Compile Include="CircularBufferTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
