@@ -7,22 +7,40 @@ namespace SignalProcessing.Core
 {
     public static class SingleChannelSignalReader
     {
-        public static SingleChannelSignal Load(string filePath)
+        public static SingleChannelSignal Read(string filePath)
         {
+            if (filePath == null)
+                throw new ArgumentNullException(nameof(filePath));
+
             using (StreamReader reader = new StreamReader(filePath))
             {
-                float freq = float.Parse(reader.ReadLine(), CultureInfo.InvariantCulture);
-                List<float> value = new List<float>();
+                string frequencyLine = reader.ReadLine();
+                if (frequencyLine == null)
+                    throw new InvalidDataException("Файл сигнала пуст.");
+
+                float frequency;
+                if (!float.TryParse(frequencyLine, NumberStyles.Float, CultureInfo.InvariantCulture, out frequency))
+                    throw new InvalidDataException("Строка 1: частота квантования не является числом.");
+                if (frequency <= 0)
+                    throw new InvalidDataException("Строка 1: частота квантования должна быть положительной.");
+
+                List<float> values = new List<float>();
+                int lineNumber = 1;
                 while (true)
                 {
                     string line = reader.ReadLine();
                     if (line == null)
                         break;
-                    value.Add(float.Parse(line, CultureInfo.InvariantCulture));
+                    lineNumber++;
+                    if (line.Length == 0)
+                        continue;
+                    float value;
+                    if (!float.TryParse(line, NumberStyles.Float, CultureInfo.InvariantCulture, out value))
+                        throw new InvalidDataException("Строка " + lineNumber + ": значение не является числом.");
+                    values.Add(value);
                 }
-                float[] arrSignal = value.ToArray();
-                SingleChannelSignal data = new SingleChannelSignal(freq, arrSignal);
-                return data;
+
+                return new SingleChannelSignal(values.ToArray(), frequency);
             }
         }
     }
