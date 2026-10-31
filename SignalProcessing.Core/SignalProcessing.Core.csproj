@@ -54,6 +54,7 @@
     <Compile Include="ThresholdCutter.cs" />
     <Compile Include="Tools.cs" />
     <Compile Include="SignalOperations.cs" />
+    <Compile Include="CircularBuffer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
