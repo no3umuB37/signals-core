@@ -66,6 +66,10 @@
     <Compile Include="SineGenerator.cs" />
     <Compile Include="LineGenerator.cs" />
     <Compile Include="NoiseGenerator.cs" />
+    <Compile Include="SquareGenerator.cs" />
+    <Compile Include="SawGenerator.cs" />
+    <Compile Include="TriangleGenerator.cs" />
+    <Compile Include="ConstantGenerator.cs" />
     <Compile Include="SignalGeneratorFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
