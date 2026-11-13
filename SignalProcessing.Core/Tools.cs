@@ -10,7 +10,7 @@ namespace SignalProcessing.Core
         {
             int count = GetCount(len, freq);
             float[] y = Enumerable.Range(0, count).Select(i => k * i / freq + b).ToArray();
-            return new SingleChannelSignal(freq, y);
+            return new SingleChannelSignal(y, freq);
         }
 
         public static SingleChannelSignal Sin(float len, float freq, float period, float phase, float scale = 1)
@@ -20,7 +20,7 @@ namespace SignalProcessing.Core
             int count = GetCount(len, freq);
             float[] y = Enumerable.Range(0, count)
                 .Select(i => scale * (float)Math.Sin((i / freq - phase) * 2 * Math.PI / period)).ToArray();
-            return new SingleChannelSignal(freq, y);
+            return new SingleChannelSignal(y, freq);
         }
 
         public static SingleChannelSignal Noise(float len, float freq, float amplitude)
@@ -30,32 +30,7 @@ namespace SignalProcessing.Core
             Random random = new Random();
             int count = GetCount(len, freq);
             float[] y = Enumerable.Range(0, count).Select(i => (float)(random.NextDouble() * 2 - 1) * amplitude).ToArray();
-            return new SingleChannelSignal(freq, y);
-        }
-
-        public static SingleChannelSignal Summ(List<SingleChannelSignal> signalList)
-        {
-            if (signalList == null || signalList.Count == 0)
-                return null;
-            float freq = signalList[0].Freq;
-            if (signalList.Any(s => Math.Abs(s.Freq - freq) > 0.0000001))
-                return null;
-            int count = signalList.Select(s => s.Value.Length).Max();
-            float[] result = new float[count];
-            foreach (SingleChannelSignal signal in signalList)
-                for (int i = 0; i < signal.Value.Length; i++)
-                    result[i] += signal.Value[i];
-            return new SingleChannelSignal(freq, result);
-        }
-
-        public static SingleChannelSignal Concat(List<SingleChannelSignal> signalList)
-        {
-            if (signalList == null || signalList.Count == 0)
-                return null;
-            float freq = signalList[0].Freq;
-            if (signalList.Any(s => Math.Abs(s.Freq - freq) > 0.0000001))
-                return null;
-            return new SingleChannelSignal(freq, signalList.SelectMany(s => s.Value).ToArray());
+            return new SingleChannelSignal(y, freq);
         }
 
         private static int GetCount(float len, float freq)

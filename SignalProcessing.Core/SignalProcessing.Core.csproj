@@ -19,7 +19,6 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>bin\Debug\SignalProcessing.Core.xml</DocumentationFile>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -29,7 +28,6 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>bin\Release\SignalProcessing.Core.xml</DocumentationFile>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -55,6 +53,12 @@
     <Compile Include="RangeAnnotation.cs" />
     <Compile Include="ThresholdCutter.cs" />
     <Compile Include="Tools.cs" />
+    <Compile Include="SignalOperations.cs" />
+    <Compile Include="CircularBuffer.cs" />
+    <Compile Include="Resampler.cs" />
+    <Compile Include="OfflineMedianFilter.cs" />
+    <Compile Include="OnlineMedianFilter.cs" />
+    <Compile Include="ExponentialSmoothingFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

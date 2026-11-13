@@ -11,6 +11,7 @@ namespace SignalProcessing.Core
         }
 
         public int StartIndex { get; }
+
         public int EndIndex { get; }
     }
 }
