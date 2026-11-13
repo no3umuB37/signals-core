@@ -45,6 +45,8 @@
     <Compile Include="ResamplerTests.cs" />
     <Compile Include="MedianFilterTests.cs" />
     <Compile Include="ExponentialSmoothingFilterTests.cs" />
+    <Compile Include="SamplingParametersTests.cs" />
+    <Compile Include="SignalGeneratorFactoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
