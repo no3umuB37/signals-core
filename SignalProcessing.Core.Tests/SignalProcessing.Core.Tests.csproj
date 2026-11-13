@@ -50,6 +50,7 @@
     <Compile Include="SineGeneratorTests.cs" />
     <Compile Include="LineGeneratorTests.cs" />
     <Compile Include="NoiseGeneratorTests.cs" />
+    <Compile Include="AdditionalGeneratorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
