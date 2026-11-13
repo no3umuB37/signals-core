@@ -66,6 +66,7 @@
     <Compile Include="SineGenerator.cs" />
     <Compile Include="LineGenerator.cs" />
     <Compile Include="NoiseGenerator.cs" />
+    <Compile Include="SignalGeneratorFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
