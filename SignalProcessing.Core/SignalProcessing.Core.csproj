@@ -52,13 +52,14 @@
     <Compile Include="OutOfRangeEventArgs.cs" />
     <Compile Include="RangeAnnotation.cs" />
     <Compile Include="ThresholdCutter.cs" />
-    <Compile Include="Tools.cs" />
     <Compile Include="SignalOperations.cs" />
     <Compile Include="CircularBuffer.cs" />
     <Compile Include="Resampler.cs" />
     <Compile Include="OfflineMedianFilter.cs" />
     <Compile Include="OnlineMedianFilter.cs" />
     <Compile Include="ExponentialSmoothingFilter.cs" />
+    <Compile Include="SamplingParameters.cs" />
+    <Compile Include="ISignalGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
