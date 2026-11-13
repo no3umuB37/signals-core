@@ -60,6 +60,9 @@
     <Compile Include="ExponentialSmoothingFilter.cs" />
     <Compile Include="SamplingParameters.cs" />
     <Compile Include="ISignalGenerator.cs" />
+    <Compile Include="GeneratorParameters.cs" />
+    <Compile Include="SignalParameters.cs" />
+    <Compile Include="SignalType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
